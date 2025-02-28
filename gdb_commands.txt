@@ -1,0 +1,10 @@
+set pagination off
+set logging on gdb_output.log
+set logging overwrite on
+break main
+break X::X::initialize
+break X::EventHandler::processNextEvent
+break X::Launcher::createWindow
+break X::Launcher::show
+break Logger::init
+run

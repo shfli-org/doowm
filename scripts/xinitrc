@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# xinitrc for doowm
+
+# Get the project root directory
+PROJECT_ROOT=$(cd "$(dirname "$0")/.." && pwd)
+echo "Starting window manager from: $PROJECT_ROOT"
+
+# Set background color
+xsetroot -solid "#333333"
+
+# Start some applications
+xeyes &
+# Start the window manager
+if [ "$USE_GDB" = "1" ]; then
+    # GDBで起動する場合は何もしない（別のターミナルでGDBを実行）
+    echo "Window manager will be started with GDB in another terminal"
+    # 無限ループでXephyrを維持
+    while true; do
+        sleep 10
+    done
+else
+    # 通常起動
+    "$PROJECT_ROOT/build/doowm"
+fi

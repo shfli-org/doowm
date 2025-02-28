@@ -1,0 +1,7 @@
+[
+  {
+    "directory": "/home/r3v321se/Projects/doowm",
+    "command": "g++ -I/home/r3v321se/Projects/doowm/src -std=c++17 -c src/x/x.cpp -o src/x/x.o",
+    "file": "src/x/x.cpp"
+  }
+] 
